@@ -1,10 +1,20 @@
-﻿namespace CSharpFundamentals;
+﻿using System;  // Import the System namespace
+using CSharpFundamentals.Math;
 
-class Program
+namespace CSharpFundamentals
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            var john = new Person();
+            john.FirstName = "John";
+            john.LastName = "Cena";
+            john.Introduce();
+
+            Calculator calculator = new Calculator();  
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
+        }
     }
 }
-
